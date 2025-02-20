@@ -17,8 +17,8 @@ local Window = Rayfield:CreateWindow({
    },
  
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "https://discord.gg/j7FbQjscGF", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
  
@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "WexSecurity",
       Subtitle = "KeySystem",
-      Note = "you can get the key in the discord channel: discord.gg/ggVChhwF", -- Use this to tell the user how to get a key
+      Note = "you can get the key in the discord channel: https://discord.gg/j7FbQjscGF", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
