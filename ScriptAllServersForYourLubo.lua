@@ -216,6 +216,8 @@ local Paragraph = NewsTab:CreateParagraph({Title = "Update(1)", Content = "New t
 
 local Paragraph = NewsTab:CreateParagraph({Title = "Update(2)", Content = "New Function in Shooters:Script(Solaris.lol) For CounterBlox, And New Two Functions in Other Tab: Script For TSB1 And Script for TSB2"})
 
+local Paragraph = NewsTab:CreateParagraph({Title = "Update(3)", Content = "New Tab BrookHaven, and functions in tab BrookHaven:OtherHub, FlyGuiV3, Ctrl+Click TP. New tab TowerOfHell, And new functions in tab TowerOfHell: TakeSpeedCoil, TakeInfJumpCoil, TakeHook, TakeGravityCoil, TakeFusionCoil, TakeBloxyCola, And sliders: WalkSpeed changer, And JumpPower changer!!!"})
+
 --BrookHaven
 
 local BrookHavenTab = Window:CreateTab("BrookHaven", 4483362458) -- Title, Image
