@@ -28,7 +28,7 @@ local Window = Rayfield:CreateWindow({
       Subtitle = "KeySystem",
       Note = "you can get the key in the discord channel: .gg/j7FbQjscGF", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"hohoho25678945HubWex"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
@@ -215,3 +215,114 @@ local NewsTab = Window:CreateTab("News", 4483362458) -- Title, Image
 local Paragraph = NewsTab:CreateParagraph({Title = "Update(1)", Content = "New tab:Shooters, News functions in Player(InfiniteJump) And Functions in shooters(Esp + HitboxExpander)"})
 
 local Paragraph = NewsTab:CreateParagraph({Title = "Update(2)", Content = "New Function in Shooters:Script(Solaris.lol) For CounterBlox, And New Two Functions in Other Tab: Script For TSB1 And Script for TSB2"})
+
+--BrookHaven
+
+local BrookHavenTab = Window:CreateTab("BrookHaven", 4483362458) -- Title, Image
+
+local Button = BrookHavenTab:CreateButton({
+   Name = "OtherHub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+   end,
+})
+
+local Button = BrookHavenTab:CreateButton({
+   Name = "Ctrl+Click TP",
+   Callback = function()
+   game.StarterGui:SetCore("SendNotification",{
+    Title = "Usage";
+    Text = "Hover mouse on target then press ctrl + mouse1";
+})
+
+game.StarterGui:SetCore("SendNotification",{
+    Title = "Shameless Plugin";
+    Text = "WexHub:)";
+})
+
+local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+if not Mouse.Target then return end
+Plr.Character:MoveTo(Mouse.Hit.p)
+end)
+   end,
+})
+
+local Button = BrookHavenTab:CreateButton({
+   Name = "FlyGuiV3",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+   end,
+})
+
+--TowerOfHell
+local TowerOfHellTab = Window:CreateTab("TowerOfHell", 4483362458) -- Title, Image
+
+local Button = TowerOfHellTab:CreateButton({
+   Name = "TakeSpeedCoil(one time)",
+   Callback = function()
+   game.ReplicatedStorage.Gear.speed.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Button = TowerOfHellTab:CreateButton({
+   Name = "TakeInfJumpCoil(one time)",
+   Callback = function()
+   game.ReplicatedStorage.Gear.jump.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Button = TowerOfHellTab:CreateButton({
+   Name = "TakeHook(one time)",
+   Callback = function()
+   game.ReplicatedStorage.Gear.hook.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Button = TowerOfHellTab:CreateButton({
+   Name = "TakeGravityCoil(one time)",
+   Callback = function()
+   game.ReplicatedStorage.Gear.gravity.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Button = TowerOfHellTab:CreateButton({
+   Name = "TakeFusionCoil(one time)",
+   Callback = function()
+   game.ReplicatedStorage.Gear.fusion.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Button = TowerOfHellTab:CreateButton({
+   Name = "TakeBloxyCola(one time)",
+   Callback = function()
+   game.ReplicatedStorage.Gear.cola.Parent = game.Players.LocalPlayer.Backpack
+   end,
+})
+
+local Slider = TowerOfHellTab:CreateSlider({
+   Name = "WalkSpeed",
+   Range = {16, 100},
+   Increment = 1,
+   Suffix = "WalkSpeed",
+   CurrentValue = 10,
+   Flag = "Slider3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value123)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value123
+   end,
+})
+
+local Slider = TowerOfHellTab:CreateSlider({
+   Name = "JumpPower",
+   Range = {50, 175},
+   Increment = 1,
+   Suffix = "JumpPower",
+   CurrentValue = 10,
+   Flag = "Slider3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value1234)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value1234
+   end,
+})
